@@ -1,0 +1,77 @@
+1. Shouldn't be in quotes
+
+2.  public boolean whatever (String str) {
+          if (str.length() > 0 && str.substring(str.length()-1,str.length()).equals("*")) {
+	return true;
+          }
+          return false;
+     }
+
+3.  public boolean whatever (String ssn) {
+          for (int n = 0; n < ssn.length() - 1; n++) {
+               if (ssn.substring(n,n+1).equals("-")) {
+                    ssn = ssn.substring(0,n) + ssn.substring(n+1,ssn.length);
+               }
+          }
+     return ssn;
+     }
+
+4. 
+a.
+public string whatever (String date) {
+     String c1 = date.substring(0,2);
+     String c2 = date.substring(3,5);
+     String c3 = date.substring(6,date.length());
+     date = c2 + c1 + c3;
+}
+b.
+public string whatever (String date) {
+     String c = "";
+     for (int n = 0; n < date.length()-1; n++) {
+           if (date.charAt(n).equals("/")) {
+               for (int o = n; o < date.length()-1; o++) {
+                    if (date.charAt(o).equals("/") || o = date.lenght()-1) {
+                         c += date.substring(n,o);
+                    }
+               }
+          } 
+     }
+     c = c.replace("/","-");
+}
+5.
+a.
+public string whatever (String cnum) {
+     String last4 = cnum.substring(cnum.length()-4,cnum.length());
+     return last4;
+}
+b.
+public string whatever (String cnum) {
+     String last = cnum.trim();
+     String last5 = last.substring(last.length()-5,last.length());
+     return last5;
+}
+6.
+public string whatever (String scroll) {
+     String scroll = scroll.substring(1) + scroll.substring(0,1);
+     return scroll;
+}
+7.
+public string whatever (String name) {
+     int comma = name.lndexOf(",");
+     name = name.substring(comma+1) + " " + name.substring(0,comma);
+     return name;
+}
+10.
+public string whatever (String thing) {
+     int mark1 = thing.indexOf("/*");
+     int mark2 = thing.indexOf("*/);
+     thing = thing.substring(0,mark1) + thing.substring(mark2);
+     return thing;
+}
+18.
+public boolean isPalindrome(String word) {
+     
+     String word1 = word.substring(word.length/2);
+     String word1 = word.substring(0,word.length/2);
+}
+20.

@@ -1,0 +1,30 @@
+PRINT "Welcome to Billy Bob's Bargain Basement"
+PAUSE 1
+PRINT "You are buying 5 items, no more, no less, first you will answer three questions, with sub questions."
+PAUSE 1
+PRINT "WHAT ";
+PAUSE .5
+INPUT prompt "is your name? ": varNam$
+PAUSE .5
+PRINT "WHAT ";
+PAUSE .5
+INPUT prompt "is your quest? ": varQue$
+PAUSE .5
+PRINT "WHAT ";
+PAUSE .5
+INPUT prompt "is your first item? ": a$
+INPUT prompt "What is your second item? ": b$
+INPUT prompt "What is your third item? ": c$
+INPUT prompt "What is your fourth item?  ": d$
+INPUT prompt "What is your fifth item? ": e$
+INPUT prompt "What is the cost of your first item? ": a
+INPUT prompt "What is the cost of your second item? ": b
+INPUT prompt "What is the cost of your third item? ": c
+INPUT prompt "What is the cost of your fourth item? ": d
+INPUT prompt "What is the cost of your fifth item? ": e
+INPUT prompt "What is the sales tax (as a decimal)? ": varTax
+OPEN #1: SCREEN .5, 1, .5, 1
+PRINT "ITEM",
+PRINT "AMOUNT"
+PRINT "#1)" & a$ ,
+END

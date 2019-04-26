@@ -1,0 +1,69 @@
+1) double sgt[] = new double[800];
+2) 21
+3) 
+for (int n = 0; n < sgt.length; n++) {
+	sgt[n] = sqrt(n);
+}
+4) .length() should not have parenthesis, should not be double
+5) char cr[] = new char["a","b","c","d","e"];
+6) 5
+7) 
+int sum = 0;
+for (int n = 0; n < ref.length; n++) {
+	sum += sqrt(ref[n]);
+}
+System.out.print(sum);
+8) it will give an out of bounds exception, the for-loop should be 
+for (int k = 2; k < home.length-1;k++)
+9) 
+boolean bbc = heroWorship(dbx);
+public  boolean heroWorship(double vb[])
+10) 56
+11) 23
+12) it would give an error
+13) turns every value in the array b to a positive number
+14) >>>1234
+15) 
+int indx = -1;
+for (int n = 0; n < pg.length; n++) {
+	if (pg[n] < 0) {
+		indx = n;
+	}
+}
+if (indx == -1) {
+	indx = pg.length;
+}
+16)
+Wh
+ping crane
+17) fee, fi fo
+18) Onetwo
+19)
+int sum = 0;
+String th = "The best THERE is is Barth"
+String th = th.toLowerCase();
+String the[] = th.split("th");
+sum = the[].length - 1;
+lesson 19
+1) 
+int ba[] = new Int[300];
+ba[47] = 92;
+ba[102] = 1007;
+2)
+if (k[3] == km[5]) {
+	return true;
+}
+3)
+if (s[2].equals(ss[19])) {
+	return true;
+}
+4)
+if (cir[2] == cirr[10]) {
+	return true;
+}
+5) months must be initialized, i.e. char months[] = new char[1];
+6) 17, 20
+7)
+String qbf[];
+qbf[] = d.toCharArray();
+8) System.arraycopy(ch, 1, nn, 

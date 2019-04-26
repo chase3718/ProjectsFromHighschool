@@ -1,0 +1,23 @@
+INPUT PROMPT "n1: ": n1
+LET fn1 = n1
+INPUT PROMPT "n2: ": n2
+LET fn2 = n2
+IF n2 > n1 then
+   LET n1 = fn2
+   LET n2 = fn1
+ELSE
+END IF
+LET div = n1
+LET nrem = n2
+FOR x = 1 to 1000
+    IF ROUND(((div/nrem)-TRUNCATE(div/nrem,0))*nrem) = 0 then
+       EXIT FOR
+    ELSE
+    END IF
+    LET quo = TRUNCATE(n1/n2,0)
+    LET nrem = ROUND(((div/nrem)-TRUNCATE(div/nrem,0))*nrem)
+    LET div = nrem
+    PRINT nrem
+NEXT x
+PRINT "GCD: " & STR$(nrem)
+END

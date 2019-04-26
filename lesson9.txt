@@ -1,0 +1,52 @@
+1. false
+
+2. true
+
+3. false
+
+4. true
+
+5. false
+
+6. true
+
+7. true
+
+8. false
+
+9. true
+
+10. true
+
+11. int m = 5;
+boolean b = (m <= 44);
+
+12. int r = 1e + 13;
+boolean b = (r < 17);
+
+13. false
+
+14. Not equal
+
+15. Equal
+
+16. 19
+200
+
+17. int g = 35;
+boolean b = (g == 34);
+
+18. int k = 5;
+if(k % 2 == 0){
+boolean b = true;
+else
+boolean b = false;
+}
+
+19. Scanner password = new scanner(System.in);
+if(password == "XRay"){
+System.out.println("Password Entered succesfuly");
+else
+System.out.println("Incorect password");
+
+20. Two

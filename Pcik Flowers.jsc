@@ -1,0 +1,26 @@
+@Java
+method f(){
+    while(!(isFacing(WEST) && isWater(AHEAD) && isWater(LEFT))){
+        if(isClear(AHEAD)){
+            hop();
+        }else if(isFlower(AHEAD)){
+            hop();
+            pick();
+        }else if(isWater(AHEAD) && isFacing(EAST)){
+            turn(RIGHT);
+            hop();
+            pick();
+            turn(RIGHT);
+        }else if(isWater(AHEAD) && isFacing(WEST)){
+            turn(LEFT);
+            hop();
+            pick();
+            turn(LEFT);
+        }
+    }
+}
+@@
+method main(){
+    Jeroo j = new Jeroo(0,0);
+    j.f();
+}

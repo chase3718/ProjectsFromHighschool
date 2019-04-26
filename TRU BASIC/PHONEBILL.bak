@@ -1,0 +1,30 @@
+PRINT "-=WELCOME TO THE PHONE CALL CALCULATOR INTERFACE=-",
+INPUT PROMPT "Please insert username. ": z$
+IF z$ = "chase" OR z$= "Chase" OR z$= "CHASE" OR z$ = "cHASE" THEN
+   INPUT PROMPT "Please insert your passwod. ": y$
+   IF y$ = "12345" then
+      PRINT "Welcome"
+      INPUT PROMPT "How long was your call?(Minutes) ": varCal
+      LET x = varCal
+      IF x <= 3 then
+         PRINT "That will cost $2.25."
+      ELSE
+         IF x < 6 AND x > 4 THEN
+            LET p = (x - 3) * .25 + 2.25
+            PRINT "That will cost $" & str$(p) & "."
+         ELSE
+            IF x > 6 THEN
+               LET f = ((x - 6) * .10) + 3.4
+               PRINT "That will cost $" & str$(f) & "0."
+            END IF
+         END IF
+      END IF
+   END IF
+   IF y$ <> "12345" THEN
+      PRINT "WRONG PASSWORD"
+   END IF
+   IF z$ <> "chase" OR z$ <> "CHASE" OR z$ <> "Chase" OR z$ <> "cHASE" THEN
+      PRINT "WRONG USERNAME"
+   END IF
+END IF
+END

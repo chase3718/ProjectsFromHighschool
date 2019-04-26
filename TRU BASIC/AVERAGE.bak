@@ -1,0 +1,4 @@
+INPUT PROMPT "Input 5 numbers with commas between them ": a,b,c,d,e
+LET x = (a + b + c + d + e) / 5
+PRINT x
+END

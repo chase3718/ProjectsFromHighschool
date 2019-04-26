@@ -1,0 +1,3 @@
+711 Illegal window number: 2
+1169 in tc_win_valid,1145 in tc_win_switch,3824 in close_error_window,2592 in so
+urce_window_run,661 in handle_menu_event,251 in Main program

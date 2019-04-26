@@ -1,0 +1,73 @@
+PRINT "I am thinking of a number 1 to 100, five tries, what is it."
+LET k = TRUNCATE(RND * 100,0)
+FOR ges = 1 to 5
+    INPUT a
+    IF a = k then
+       PRINT "YOU ARE CORRECT"
+       EXIT FOR
+    ELSE IF a < k and a < 100 and a > 0 then
+       PRINT "Higher"
+    ELSE IF a > k and a < 100 and a > 0 then
+       PRINT "Lower"
+    ELSE IF a < 0 OR a > 100 then
+       PRINT "YOU SUCK"
+       EXIT FOR
+    END IF
+NEXT ges
+IF a <> k then
+   PRINT "You Lose"
+ELSE IF a = k then
+   CLEAR
+   SET MODE "color256"
+   LET z = .01
+   LET q = 0
+   DIM c(2,2)
+   LET c(1,1) = .001
+   LET c(1,2) = .001
+   LET c(2,1) = .001
+   LET c(2,2) = .001
+   DIM x(2,2)
+   LET x(1,1) = -COS(z^2)
+   LET x(1,2) = SIN(z)
+   LET x(2,1) = -TAN(z)
+   LET x(2,2) = -COS(z^2)
+   LET m = 1
+   FOR m = 1 to 1000000
+       LET c11 = TRUNCATE(c(1,1),2)
+       LET c12 = TRUNCATE(c(1,2),2)
+       LET c21 = TRUNCATE(c(2,1),2)
+       LET c22 = TRUNCATE(c(2,2),2)
+       IF c12 > c11 THEN
+          LET a = c(1,1)
+          LET b = c(1,2)
+       ELSE IF c11 > c12 THEN
+          LET a = c(1,2)
+          LET b = c(1,1)
+       ELSE
+          LET a = c(1,1)
+          LET b = c(1,2) + .01
+       END IF
+       IF c22 > c21 THEN
+          LET d = c(2,1)
+          LET e = c(2,2)
+       ELSE IF c21 > c22 THEN
+          LET d = c(2,2)
+          LET e = c(2,1)
+       ELSE
+          LET d = c(2,2)
+          LET e = c(2,1) + .01
+       END IF
+       SET COLOR m
+       PLOT POINTS: a+.5,d+.5
+       MAT c = x * c
+       PAUSE q
+   NEXT m
+   FOR erx = 0 to 256
+       SET COLOR erx
+       PRINT "YOU WIN";
+       IF erx = 256 then
+          LET erx = 0
+       END IF
+   NEXT erx
+END IF
+END

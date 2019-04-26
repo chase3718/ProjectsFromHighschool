@@ -1,0 +1,46 @@
+INPUT PROMPT "What for loop do you want to run? ": c
+IF c = 1 then
+   LET n = 1
+   FOR x = 1 TO 6
+       PRINT STR$(n)
+       LET n = n + 3
+   NEXT x
+ELSE IF c = 2 then
+   LET f = 20
+   FOR g = 1 TO 4
+       PRINT STR$(f)
+       LET f = f - 5
+   NEXT g
+ELSE IF c = 3 then
+   LET j$ = "*"
+   FOR p = 1 TO 500
+       PRINT j$;
+   NEXT p
+ELSE IF c = 4 then
+   INPUT PROMPT "Please enter a number. ": r
+   FOR e = 1 TO r
+       PRINT "*";
+   NEXT e
+ELSE IF c = 5 then
+   INPUT prompt "Enter a number. ": o
+   LET n = 1
+   FOR i = 1 TO o
+       PRINT STR$(n)
+       LET n = n + 2
+       IF n > o THEN
+          EXIT FOR
+       END IF
+   NEXT i
+ELSE IF c = 6 then
+   LET sum = 0
+   FOR k = 1 to 100
+       INPUT prompt "Input a number, -1 finds the average. ": varNum
+       LET sum = sum + varNum
+       IF varNum = -1 then
+          EXIT FOR
+       END IF
+   NEXT k
+   LET h = sum / k
+   PRINT STR$(h)
+END IF
+END

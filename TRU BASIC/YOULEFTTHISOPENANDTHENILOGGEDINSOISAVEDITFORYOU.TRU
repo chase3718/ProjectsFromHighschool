@@ -1,0 +1,10 @@
+input a$
+why do I need to input a number for it print the time?
+FOR x = 0 to 1
+PRINT a$
+PRINT TIME$
+PAUSE 1
+CLEAR
+LET x = 0
+NEXT x
+END

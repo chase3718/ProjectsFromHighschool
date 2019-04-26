@@ -1,0 +1,19 @@
+INPUT prompt "What is your initial balance?(No dollar signs)": inBalance
+
+INPUT prompt "Type 1 for withdraw or 2 for deposit": varTrans
+
+IF varTrans = 1 then
+   INPUT prompt "How much would you like to withdraw?": varWith
+ELSE IF varTrans = 2 then
+   INPUT prompt "How much would you like to deposit?": varDep
+END IF
+
+IF varTrans = 1 then
+   LET inBalance = inBalance - varWith
+ELSE IF varTrans = 2 then
+   LET inBalance = inBalance + varDep
+END IF
+
+PRINT inBalance ;
+PRINT "$ left."
+END

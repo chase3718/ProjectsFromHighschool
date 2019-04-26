@@ -1,0 +1,45 @@
+1. a. Rectangle
+   b. myRect
+   c. double, int
+
+2. public Rectangle(double l, int w)
+
+3. Lunch yummy5 = new Lunch(true,900)
+
+4. a. BankAccount
+   b. account39
+   c. double
+
+5. cookie cutter, cookie
+
+6. void
+
+7. a.
+
+8. a.
+
+9. illegal, q must be boolean
+
+10. a. int
+    b. int
+    c. double
+
+11. public BibleStory(String x, int y, double z)
+
+12. 
+
+13. public void Samson(), public String getDelilah()
+
+14. BibleStory philistine = new BibleStory("Ralph",19,24.18);
+
+15. double var2 = 106.9;
+
+16. System.out.print(bart.sss());
+
+17. String jj = bart.sss;
+
+18. public trail(int x, int y, String s)
+
+19. 
+
+20. not double, peachyDandy

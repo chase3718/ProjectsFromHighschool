@@ -1,0 +1,155 @@
+PRINT "W E L C O M E   T O   P E R D Y   P E N G U I N S   I C E   C R E A M   P A R L O R"
+PAUSE 1
+INPUT PROMPT "Would you like to buy something? ": a$
+IF a$ = "yes" then
+   PRINT "Cone: 1"
+   PRINT "Shake: 2"
+   PRINT "Sundae: 3"
+   INPUT PROMPT "Would you like a cone, shake or sundae? ": b$
+   IF b$ = "1" then
+      PRINT "Vanilla: 1"
+      PRINT "Chocolatte: 2"
+      PRINT "Strawberry: 3"
+      INPUT PRompt "Vanilla, chocolate, or strawberry? ": c$
+      IF c$ = "1" then
+         LET vcsc$ = "Vannila"
+      ELSE IF c$ = "2" then
+         LET vcsc$ = "Chocolatte"
+      ELSE IF c$ = "3" then
+         LET vcsc$ = "Strawberry"
+      END IF
+      INPUT prompt "1 dip, 2 dip, or 3 dip? ": d$
+      IF d$ = "1" then
+         LET dip$ = "1 dip"
+         LET l = 1.00
+      ELSE IF d$ = "2" then
+         LET dip$ = "2 dip"
+         LET l = 1.50
+      ELSE IF d$ = "3" then
+         LET dip$ = "3 dip"
+         LET l = 2.00
+      END IF
+      PRINT "Cake Cone: 1"
+      PRINT "Sugar Cone: 2"
+      PRINT "Waffle Cone: 3"
+      INPUT prompt "Cake cone, sugar cone, or waffle cone? ": e$
+      IF e$ = "1" then
+         LET csw$ = "Cake Cone"
+      ELSE IF e$ = "2" then
+         LET csw$ = "Sugar Cone"
+      ELSE IF e$ = "3" then
+         LET csw$ = "Waffle Cone"
+      END IF
+   ELSE
+      IF b$ = "2" then
+         PRINT "Vanilla: 1"
+         PRINT "Chocolatte: 2"
+         PRINT "Strawberry: 3"
+         INPUT PRompt "Vanilla, chocolate, or strawberry? ": c$
+         IF c$ = "1" then
+            LET vcsc$ = "Vannila"
+         ELSE IF c$ = "2" then
+            LET vcsc$ = "Chocolatte"
+         ELSE IF c$ = "3" then
+            LET vcsc$ = "Strawberry"
+         END IF
+         PRINT "Small: 1"
+         PRINT "Medium: 2"
+         PRINT "Large: 3"
+         INPUT prompt "Small, medium, or large? ": f$
+         IF f$ = "1" then
+            LET m = 1.75
+            LET sml$ = "Small"
+         ELSE IF f$ = "2" then
+            LET m = 2.00
+            LET sml$ = "Medium"
+         ELSE IF f$ = "3" then
+            LET m = 2.25
+            LET sml$ = "Large"
+         END IF
+      ELSE
+         IF b$ = "3" then
+            PRINT "Vanilla: 1"
+            PRINT "Chocolatte: 2"
+            PRINT "Strawberry: 3"
+            INPUT PRompt "Vanilla, chocolatte, or strawberry? ": c$
+            IF c$ = "1" then
+               LET vcsc$ = "Vannila"
+            ELSE IF c$ = "2" then
+               LET vcsc$ = "Chocolatte"
+            ELSE IF c$ = "3" then
+               LET vcsc$ = "Strawberry"
+            END IF
+            PRINT "Small: 1"
+            PRINT "Medium: 2"
+            PRINT "Large: 3"
+            INPUT prompt "Small, medium, or large? ": f$
+            IF f$ = "1" then
+               LET m = 1.85
+               LET sml$ = "Small"
+            ELSE IF f$ = "2" then
+               LET m = 2.15
+               LET sml$ = "Medium"
+            ELSE IF f$ = "3" then
+               LET m = 2.65
+               LET sml$ = "Large"
+            END IF
+            INPUT prompt "Would you like a syrup on that? ": g$
+            IF g$ = "yes" then
+               PRINT "Chocolatte: 1"
+               PRINT "Butterscotch: 2"
+               PRINT "Hot Fudge: 3"
+               INPUT prompt "Chocolate, butterscotch, or hot fudge? ": h$
+            ELSE
+               IF g$ = "no" then
+               END IF
+            END IF
+         END IF
+      END IF
+   END IF
+ELSE IF a$ = "no" then
+   PRINT "GoodBye"
+END IF
+IF b$ = "1" then
+   LET x = l
+   PRINT "You chose to get 1 " & vcsc$ & " " & dip$ & " " & csw$ & " for $" & STR$(x)
+ELSE IF b$ = "2" then
+   PRINT "You chose to get 1 " & sml$ & " " & vcsc$ & " shake for $" & STR$(m)
+ELSE IF b$ = "3" then
+   INPUT prompt "Any additional toppings? ": i$
+   IF i$ = "yes" then
+      PRINT "Nuts: 1"
+      PRINT "Whipped Cream: 2"
+      PRINT "Cherry: 3"
+      INPUT prompt "Nuts, Whipped cream, and/or cherry? (spaces between each) ": j$
+      IF j$ = "1 2" then
+         LET nwc$ = "Nuts and Whipped cream"
+         LET k = .5
+      ELSE IF j$ = "1 3" then
+         LET nwc$ = "Nuts and Cherry"
+         LET k = .2
+      ELSE IF j$ = "2 3" then
+         LET nwc$ = "Whipped cream and Cherry"
+         LET k = .3
+      ELSE IF j$ = "1 2 3" then
+         LET nwc$ = "Nuts, Whipped cream, and Cherry"
+         LET k = .5
+      ELSE IF j$ = "1" then
+         LET nwc$ = "Nuts"
+         LET k = .2
+      ELSE IF j$ = "2" then
+         LET nwc$ = "Whipped Cream"
+         LET k = .3
+      ELSE IF j$ = "3" then
+         LET nwc$ = "Cherry"
+         LET k = 0
+      END IF
+   ELSE IF i$ = "no" then
+      LET k = 0
+      LET j$ = "no toppings"
+   END IF
+   LET y = m + k
+   PRINT "You chose to get 1 " & sml$ & " " & vcsc$ & " sundae with " & nwc$ & " for $" & STR$(y)
+ELSE IF a$ = "no" then
+END IF
+END

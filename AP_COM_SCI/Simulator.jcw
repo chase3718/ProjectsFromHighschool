@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>Simulator</label>
+		<id>15</id>
+		<version>0</version>
+	</settings>
+	<users>
+		<user>
+			<path>Simulator.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>New folder\SIMULATOR.jcp</path>
+		</project>
+		<project>
+			<path>Simulator.jcp</path>
+		</project>
+	</projects>
+</workspace>

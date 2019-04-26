@@ -1,0 +1,86 @@
+PRINT "WELCOME TO PERDY PENGUINS ICE CREAM PARLOR"
+PAUSE 1
+INPUT PROMPT "Would you like to buy something? ": a$
+IF a$ = "yes" then
+   INPUT PROMPT "Would you like a cone, shake or sundae? ": b$
+   IF b$ = "cone" then
+      INPUT PRompt "Vanilla, chocolate, or strawberry? ": c$
+      INPUT prompt "1 dip, 2 dip, or 3 dip? ": d$
+      IF d$ = "1 dip" then
+         LET l = 1.00
+      ELSE IF d$ = "2 dip" then
+         LET l = 1.50
+      ELSE IF d$ = "3 dip" then
+         LET l = 2.00
+      END IF
+      INPUT prompt "Cake cone, sugar cone, or waffle cone? ": e$
+   ELSE
+      IF b$ = "shake" then
+         INPUT PRompt "Vanilla, chocolate, or strawberry? ": c$
+         INPUT prompt "Small, medium, or large? ": f$
+         IF f$ = "small" then
+            LET m = 1.75
+         ELSE IF f$ = "medium" then
+            LET m = 2.00
+         ELSE IF f$ = "large" then
+            LET m = 2.25
+         END IF
+      ELSE
+         IF b$ = "sundae" then
+            INPUT PRompt "Vanilla, chocolate, or strawberry? ": c$
+            INPUT prompt "Small, medium, or large? ": f$
+            IF f$ = "small" then
+               LET m = 1.85
+            ELSE IF f$ = "medium" then
+               LET m = 2.15
+            ELSE IF f$ = "large" then
+               LET m = 2.65
+            END IF
+            INPUT prompt "Would you like a syrup on that? ": g$
+            IF g$ = "yes" then
+               INPUT prompt "Chocolate, butterscotch, or hot fudge? ": h$
+            ELSE
+               IF g$ = "no" then
+               END IF
+            END IF
+         END IF
+      END IF
+   END IF
+ELSE IF a$ = "no" then
+   PRINT "GoodBye"
+END IF
+IF b$ = "cone" then
+   LET x = l
+   PRINT "You chose to get 1 " & c$ & " " & d$ & " " & e$ & " for $" & STR$(x)
+ELSE IF b$ = "shake" then
+   PRINT "You chose to get 1 " & f$ & " " & c$ & " shake for $" & STR$(m)
+ELSE IF b$ = "sundae" then
+   INPUT prompt "Any additional toppings? ": i$
+   IF i$ = "yes" then
+      INPUT prompt "Nuts, Whipped cream, and/or cherry?": j$
+      IF j$ = "nuts and whipped cream" then
+         LET k = .5
+      ELSE IF j$ = "nuts and cherry" then
+         LET k = .2
+      ELSE IF j$ = "whipped cream and cherry" then
+         LET k = .3
+      ELSE IF j$ = "all three" then
+         LET k = .5
+      ELSE IF j$ = "nuts" then
+         LET k = .2
+      ELSE IF j$ = "whipped cream" then
+         LET k = .3
+      ELSE IF j$ = "cherry" then
+         LET k = 0
+      END IF
+   ELSE IF i$ = "no" then
+      LET k = 0
+      LET j$ = "no toppings"
+      LET y = m + k
+      PRINT "You chose to get 1 " & f$ & " " & c$ & " sundae with " & j$ & " for $" & STR$(y)
+   END IF
+
+ELSE IF a$ = "no" then
+END IF
+END
+

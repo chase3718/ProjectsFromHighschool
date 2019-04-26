@@ -1,0 +1,49 @@
+SET MODE "color256"
+INPUT PROMPT "Please enter a number.  ": z
+INPUT PROMPT "Please enter the pause.  ": q
+CLEAR
+DIM c(2,2)
+LET c(1,1) = .001
+LET c(1,2) = .001
+LET c(2,1) = .001
+LET c(2,2) = .001
+DIM x(2,2)
+LET x(1,1) = -COS(z^2)
+LET x(1,2) = SIN(z)
+LET x(2,1) = -TAN(z)
+LET x(2,2) = -COS(z^2)
+LET m = 1
+FOR m = 1 to 1000
+    LET c11 = TRUNCATE(c(1,1),2)
+    LET c12 = TRUNCATE(c(1,2),2)
+    LET c21 = TRUNCATE(c(2,1),2)
+    LET c22 = TRUNCATE(c(2,2),2)
+    IF c12 > c11 THEN
+       LET a = c(1,1)
+       LET b = c(1,2)
+    ELSE IF c11 > c12 THEN
+       LET a = c(1,2)
+       LET b = c(1,1)
+    ELSE
+       LET a = c(1,1)
+       LET b = c(1,2) + .01
+    END IF
+    IF c22 > c21 THEN
+       LET d = c(2,1)
+       LET e = c(2,2)
+    ELSE IF c21 > c22 THEN
+       LET d = c(2,2)
+       LET e = c(2,1)
+    ELSE
+       LET d = c(2,2)
+       LET e = c(2,1) + .01
+    END IF
+    SET COLOR m
+    PLOT POINTS: a+.5,d+.5
+    MAT c = x * c
+    PAUSE q
+    IF m = 1000 THEN
+       LET m = 0
+    END IF
+NEXT m
+END

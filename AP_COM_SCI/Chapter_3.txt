@@ -1,0 +1,15 @@
+1. a) False
+   b) True
+   c) True
+2. a) False
+   b) True
+   c) False
+   d) false
+3. a)
+   b) 25
+4. A public can be called within a project, privates can only be used in the class they are defined in.
+5. a) True
+   b) True
+   c) True
+   d) True
+   e) False

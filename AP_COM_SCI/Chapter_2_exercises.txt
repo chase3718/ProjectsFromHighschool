@@ -1,0 +1,19 @@
+1) a.t b.t c.f d.t
+2) c++, html, python, truebasic
+3) a.t b.t
+4) A
+5) D
+6) T
+8) Syntax error
+11) import java.util.Scanner;
+public class double{
+	public static void main(String[]args){
+		Scanner n = new Scanner(System.in);
+		int x = n.nextInt();
+		System.out.println("2 * " + x + " = " + (x + x));
+	}
+}
+ b. the + operator will print out x two times
+12) event driven programs, inheritance
+13) 
+16)

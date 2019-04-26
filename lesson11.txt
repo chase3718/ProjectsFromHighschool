@@ -1,0 +1,39 @@
+1. 1
+2
+3
+4
+5
+
+2. 7
+
+3. 21
+
+4. 19683.0
+
+5. 28
+
+6. 101.01
+
+7. int p = 3;
+for(int g = 0; g < 4; g++){
+	System.out.println(p);
+	p *= 2;
+}
+
+8. int p = 24;
+for(int g = 0; g < 4; g++){
+	System.out.println(p);
+	p /= 2;
+}
+
+9. 5
+
+10. break
+
+11. 5,10,20,40
+
+12. 20
+
+13. infinite loops
+
+14. 135

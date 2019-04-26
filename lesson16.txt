@@ -1,0 +1,32 @@
+1. true
+
+2. false
+
+3. true
+
+4. true
+
+5. false
+
+6. no, method1 returns string
+
+7. yes
+
+8. yes
+
+9. no, method3 does not take perameters
+
+10. yes
+
+11. no, before method2 declared
+
+12. Surfer surferDude;
+    surferDude = new Surfer();
+
+13. c
+
+14. 2510
+
+15. b, is declared not initialized
+
+16. no = sign, b.deposit must be a number

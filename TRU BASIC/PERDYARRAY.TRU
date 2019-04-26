@@ -1,0 +1,143 @@
+PRINT "WELCOME TO PERDY PENGUINS ICE CREAM PARLOR"
+PAUSE 1
+INPUT Prompt "How many items? (up to five) ": itm
+FOR num = 1 to itm
+    PRINT "1 for Cone"
+    PRINT "2 for Shake"
+    PRINT "3 for Sundae"
+    INPUT type
+    IF type = 1 then
+       PRINT "MENU"
+       PRINT "1 for Vanilla     2 for Chocollate     3 for Strawberry"
+       PRINT "1 for 1-dip       2 for 2-dip          3 for 3-dip"
+       PRINT "1 for Cake cone   2 for Sugar cone     3 for Waffle cone"
+       PRINT "Cone"
+       INPUT PROMPT "FLAVOR " : ca
+       IF ca = 1 then
+          LET caf$ = "Vanilla"
+       ELSE IF ca = 2 then
+          LET caf$ = "Chocollate"
+       ELSE IF ca = 3 then
+          LET caf$ = "Strawberry"
+       END IF
+       INPUT PROMPT "DIP AMOUNT " : cb
+       IF cb = 1 then
+          LET cbd$ = "1-Dip"
+          LET coco$ = "$1.00"
+       ELSE IF cb = 2 then
+          LET cbd$ = "2-Dip"
+          LET coco$ = "$1.50"
+       ELSE IF cb = 3 then
+          LET cbd$ = "3-Dip"
+          LET coco$ = "$2.00"
+       END IF
+       INPUT PROMPT "Cone Type " : cc
+       IF cc = 1 then
+          LET cct$ = "Cake cone"
+       ELSE IF cc = 2 then
+          LET cct$ = "Sugar cone"
+       ELSE IF cc = 3 then
+          LET cct$ = "Waffle cone"
+       END IF
+       PRINT "You chose"
+       PRINT caf$
+       PRINT cbd$
+       PRINT cct$
+       PRINT "COST:" & coco$
+    ELSE IF type = 2 then
+       PRINT "SHAKE MENU"
+       PRINT "1 for Vanilla     2 for Chocolate     3 for Strawberry"
+       PRINT "1 for Small       2 for Medium        3 for Large"
+       INPUT PROMPT "FLAVOR ": sf
+       IF sf = 1 then
+          LET sfa$ = "Vanilla"
+       ELSE IF sf = 2 then
+          LET sfa$ = "Chocolatte"
+       ELSE IF sf = 3 then
+          LET sfa$ = "Strawberry"
+       END IF
+       INPUT PROMPT "SIZE ": ss
+       IF ss = 1 then
+          LET ssa$ = "Small"
+          LET shc = 1.75
+       ELSE IF ss = 2 then
+          LET ssa$ = "Medium"
+          LET shc = 2.00
+       ELSE IF ss = 3 then
+          LET ssa$ = "Large"
+          LET shc = 2.25
+       END IF
+       PRINT "You chose"
+       PRINT sfa$
+       PRINT ssa$
+       PRINT "COST:$" & STR$(shc)
+    ELSE IF type = 3 then
+       PRINT "SUNDAE MENU"
+       PRINT "1 For Vanilla              2 For Chocolate        3 For Strawberry"
+       PRINT "1 FOR Small                2 For Medium           3 For Large"
+       PRINT "$1.85                      $2.15                  $2.65"
+       PRINT "1 For Chocolatte syrup     2 For Butterscotch     3 For Hot Fudge      4 For None"
+       PRINT "1 For Nuts                 2 For Whipped cream    3 For Cherry         4 For None"
+       PRINT "$0.20                      $0.30                  NO CHARGE"
+       INPUT PROMPT "FLAVOR ": suf
+       IF suf = 1 then
+          LET sufa$ = "Vanilla"
+       ELSE IF suf = 2 then
+          LET sufa$ = "Chocolatte"
+       ELSE IF suf = 3 then
+          LET sufa$ = "Strawberry"
+       END IF
+       INPUT PROMPT "SIZE ": sus
+       IF sus = 1 then
+          LET susa$ = "Small"
+          LET sup = 1.85
+       ELSE IF sus = 2 then
+          LET susa$ = "Medium"
+          LET sup = 2.15
+       ELSE IF sus = 3 then
+          LET susa$ = "Large"
+          LET sup = 2.65
+       END IF
+       INPUT PROMPT "SYRUP ": sst
+       IF sst = 1 then
+          LET ssta$ = "Chocollate Syrup"
+       ELSE IF sst = 2 then
+          LET ssta$ = "Butterscotch Syrup"
+       ELSE IF sst = 3 then
+          LET ssta$ = "Hot Fudge"
+       ELSE IF sst = 4 then
+          LET ssta$ = "No Syrup"
+       END IF
+       INPUT PROMPT "TOPPING (For multiple toppings, add the to numbers together and 4 ex: 7 For Nuts and Whipped Cream": suat
+       IF suat = 1 then
+          LET suata$ = "Nuts"
+          LET suatp = .20
+       ELSE IF suat = 2 then
+          LET suata$ = "Whipped Cream"
+          LET suatp = .30
+       ELSE IF suat = 3 then
+          LET suata$ = "Cherry"
+          LET suatp = 0
+       ELSE IF suat = 4 then
+          LET suata$ = "No Toppings"
+          LET suatp = 0
+       ELSE IF suat = 7 then
+          LET suata$ = "Nuts & Whipped Cream"
+          LET suatp = .50
+       ELSE IF suat = 8 then
+          LET suata$ = "Nuts & Cherry"
+          LET suatp = .20
+       ELSE IF suat = 9 then
+          LET suata$ = "Whipped Cream & Cherry"
+          LET suatp = .30
+       END IF
+       PRINT "You Chose"
+       PRINT sufa$
+       PRINT susa$
+       PRINT ssta$
+       PRINT suata$
+       LET sutp = sup + suat
+       PRINT "COST:$" & STR$(sutp)
+    END IF
+NEXT num
+END

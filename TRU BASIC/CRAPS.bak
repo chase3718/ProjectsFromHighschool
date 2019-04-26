@@ -1,0 +1,63 @@
+INPUT Prompt "How many games do you want to play? ": gam
+LET lsum = 0
+LET wsum = 0
+FOR numgam = 1 to gam
+    LET sum = 0
+    FOR x = 1 to 2
+        LET roll = RND * 10
+        LET roll = TRUNCATE(roll,0)
+        IF roll > 6 then
+           LET roll = roll - 4
+        ELSE IF roll = 0 then
+           LET roll = roll + ROUND((RND*6),0)
+        END IF
+        !PRINT roll;
+        LET sum = sum + roll
+    NEXT x
+    IF sum = 2 OR sum = 3 OR sum = 12 then
+       !PRINT "YOU LOSE"
+       LET lsum = lsum + 1
+    ELSE IF sum = 7  OR sum = 11 then
+       !PRINT "YOU WIN"
+       LET wsum = wsum + 1
+    ELSE
+       LET sumdos = sum
+       !PRINT ""
+       !PRINT ""
+       DO
+          LET sum = 0
+          FOR y = 1 to 2
+              LET roll = RND * 10
+              LET roll = TRUNCATE(roll,0)
+              IF roll > 6 then
+                 LET roll = roll - 4
+              ELSE IF roll = 0 then
+                 LET roll = roll + ROUND((RND*5),0)
+              END IF
+              !PRINT roll;
+              LET sum = sum + roll
+          NEXT y
+          IF sum = sumdos then
+             !PRINT "YOU WIN"
+             LET wsum = wsum + 1
+             EXIT DO
+          ELSE IF sum = 7 then
+             !PRINT "YOU LOSE"
+             LET lsum = lsum + 1
+             EXIT DO
+          ELSE
+             !PRINT "YOUR POINT IS " & STR$(sumdos)
+             !PRINT "YOU ROLLED A(N) " & STR$(sum)
+          END IF
+          !PRINT ""
+          !PRINT ""
+       LOOP WHILE sumdos <> sum or sum <> 7
+    END IF
+NEXT numgam
+PRINT STR$(wsum) & " games won"
+PRINT STR$(lsum) & " gamse lost"
+LET gper = lsum / gam * 100
+LET wper = wsum / gam * 100
+PRINT STR$(gper) & "% lost"
+PRINT STR$(wper) & "% won"
+END

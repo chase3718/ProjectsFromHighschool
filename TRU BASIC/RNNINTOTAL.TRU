@@ -1,0 +1,12 @@
+INPUT a,b,c,d,e
+PRINT STR$(a) & " " & STR$(b) & " " & STR$(c) & " " & STR$(d) & " " & STR$(e)
+DIM f(5)
+LET f(1) = a
+LET f(2) = a + b
+LET f(3) = a + b + c
+LET f(4) = a + b + c + d
+LET f(5) = a + b + c + d + e
+FOR x = 1 to 5
+    PRINT STR$(f(x)) & " ";
+NEXT x
+END

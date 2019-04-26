@@ -1,0 +1,46 @@
+PRINT "-=WELCOME TO THE GRADING INTERFACE=-"
+INPUT PROMPT "Insert name of student. ": varNam$
+INPUT PROMPT "Insert password. ": varPas$
+IF varPas = password then
+   PRINT "Welcome Mr.Williams, Veiwing grades for " & varNam$
+   INPUT PROMPT "What class are you adding grades to? ": varCls$
+   PRINT "Adding grades to " & varCls$
+   INPUT PROMPT "Will you be inserting a percent or fraction? ": varIns$
+   IF varIns$ = "percent" then
+      INPUT PROMPT "What percent? ": varPer
+      LET varPer = ROUND(varPer,0)
+      IF varPer >= 90 AND varPer <= 100 then
+         PRINT varNam$ & " got a " & str$(varPer) & "%, they have an A."
+      ELSE IF varPer >= 80 AND varPer < 90 then
+         PRINT varNam$ & " got a" & str$(varPer) & "%, they have a B"
+      ELSE IF varPer >= 70 AND varPer < 80 then
+         PRINT varNam$ & " got a" & str$(varPer) & "%, they have a C"
+      ELSE IF varPer >= 60 AND varPer < 70 then
+         PRINT varNam$ & " got a" & str$(varPer) & "%, they have a D"
+      ELSE IF varPer < 60 AND varPer > 0 then
+         PRINT varNam$ & " got a" & str$(varPer) & "%, they have a F"
+      ELSE IF varPer < 0 OR varPer > 100 then
+         PRINT str$(varPer) & " is not a valid grade."
+      END IF
+   END IF
+ELSE IF varIns$ = "fraction" then
+   INPUT PROMPT "What is the numerator? ": varMer
+   INPUT PROMPT "What is the denominator? ": varDen
+   LET x = (varMer / varDen) * 100
+   IF x >= 90 AND x <= 100 then
+      PRINT varNam$ & " got a " & str$(x) & "%, they have an A"
+   ELSE IF x >= 80 AND x <90 then
+      PRINT varNam$ & " got a " & str$(x) & "%, they have a B"
+   ELSE IF x >= 70 AND x < 80 then
+      PRINT varNam$ & " got a " & str$(x) & "%, they have a C"
+   ELSE IF x >= 60 and x < 70 then
+      PRINT varNam$ & " got a " & str$(x) & "%, they have a D"
+   ELSE IF x < 60 then
+      PRINT varNam$ & " got a " & str$(x) & "%, they have a F"
+   ELSE IF x < 0 OR x > 100 then
+      PRINT str$(x) & " is not a valid grade."
+   END IF
+END IF
+
+
+END

@@ -1,0 +1,7 @@
+INPUT prompt "How big do you want your pyramid? ": a
+FOR x = 1 to a
+    PRINT REPEAT$(" ",a-x);
+    PRINT REPEAT$("",x);
+    PRINT REPEAT$("",x-1)
+NEXT x
+END

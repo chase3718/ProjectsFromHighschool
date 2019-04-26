@@ -1,0 +1,24 @@
+@Java
+method h(){
+    while(!isJeroo(AHEAD)){
+        if(isClear(AHEAD)){
+            hop();
+        }else if(isNet(AHEAD)){
+            toss();
+            hop();
+        }else if(isWater(AHEAD)){
+            if(isNet(LEFT)){
+                turn(LEFT);
+                toss();
+            }else{
+                turn(RIGHT);
+            }
+        }
+    }
+}
+@@
+method main(){
+    Jeroo j = new Jeroo(0,0,50);
+    Jeroo g = new Jeroo(23,23);
+    j.h();
+}

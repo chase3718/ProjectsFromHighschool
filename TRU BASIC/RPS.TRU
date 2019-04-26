@@ -1,0 +1,97 @@
+
+PRINT "PLAYER ONE: ";
+SET COLOR "BLUE"
+PRINT "BLUE"
+PRINT ""
+PAUSE .5
+SET COLOR BLACK
+PRINT "PLAYER TWO: ";
+SET COLOR "RED"
+PRINT "RED"
+PRINT ""
+PRINT ""
+PAUSE 1
+FOR m = 0 TO 1
+    SET COLOR "BLACK"
+    LET blu = RND
+    IF blu < .33 THEN
+       LET bmv$ = "ROCK"
+    ELSE IF blu > .32 AND blu < .66 THEN
+       LET bmv$ = "PAPER"
+    ELSE IF blu > .65 THEN
+       LET bmv$  = "SCISSORS"
+    END IF
+    LET red = RND
+    IF red < .33 THEN
+       LET rmv$ = "ROCK"
+    ELSE IF red > .32 AND red < .66 THEN
+       LET rmv$ = "PAPER"
+    ELSE IF red > .65 THEN
+       LET rmv$  = "SCISSORS"
+    END IF
+    PRINT "THE RESULTS ARE:"
+    SET COLOR "BLUE"
+    PRINT bmv$
+    SET COLOR "RED"
+    PRINT rmv$
+    IF rmv$ = "ROCK" and bmv$ = "PAPER" then
+       SET COLOR "BLUE"
+       PRINT "BLUE ";
+       SET COLOR "BLACK"
+       PRINT "WINS"
+    ELSE IF rmv$ = "ROCK" and bmv$ = "SCISSORS" then
+       SET COLOR "RED"
+       PRINT "RED";
+       SET COLOR "BLACK"
+       PRINT "WINS"
+       !ELSE IF rmv$ = "ROCK" and bmv$ = "ROCK" then
+       !  SET COLOR "BLACK"
+       ! PRINT "TIE"
+    ELSE IF bmv$ = "ROCK" and rmv$ = "SCISSORS" then
+       SET COLOR "BLUE"
+       PRINT "BLUE ";
+       SET COLOR "BLACK"
+       PRINT "WINS"
+    ELSE IF bmv$ = "ROCK" and rmv$ = "PAPER" then
+       SET COLOR "RED"
+       PRINT "RED: ";
+       SET COLOR "BLACK"
+       PRINT "WINS"
+    ELSE IF bmv$ = "PAPER" and rmv$ = "SCISSORS" then
+       SET COLOR "RED"
+       PRINT "RED: ";
+       SET COLOR "BLACK"
+       PRINT "WINS"
+       !ELSE IF rmv$ = "PAPER" and dmv$ = "PAPER" then
+       !  SET COLOR "BLACK"
+       ! PRINT "TIE"
+    ELSE IF rmv$ = "PAPER" and dmv$ = "SCISSORS" then
+       SET COLOR "BLUE"
+       PRINT "BLUE: ";
+       SET COLOR "BLACK"
+       PRINT "WINS"
+       !ELSE IF rmv$ = "SCISSORS" and dmv$ = "SCISSORS" then
+       !PRINT "TIE"
+    ELSE IF bmv$ = "SCISSORS" and rmv$ = "PAPER" then
+       SET COLOR "BLUE"
+       PRINT "BLUE: ";
+       SET COLOR "BLACK"
+       PRINT "WINS"
+    ELSE IF rmv$ = dmv$ then
+       SET COLOR "BLACK"
+       PRINT "TIE"
+    ELSE
+       SET COLOR "BLACK"
+       PRINT "TIE"
+    END IF
+
+    INPUT PROMPT "GO AGAIN? ": a$
+    IF a$ = "yes" then
+       LET m = 0
+    ELSE
+       EXIT FOR
+    END IF
+NEXT m
+
+
+END

@@ -1,0 +1,9 @@
+FOR a = 1 to 1000000000000000000000000000000000000000000000000000000
+    LET b = rnd
+    LET b = truncate((b*10) + 1, 0)
+    IF b > 6 then
+       LET b = b - 4
+    END IF
+    PRINT "Die #" & str$(a) & " is a " & str$(b),
+NEXT a
+END

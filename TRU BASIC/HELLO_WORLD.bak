@@ -1,0 +1,59 @@
+PRINT "HI NEIL ",
+PRINT "HELLO WORLD ",
+PRINT "HELLO NEIL"
+PRINT "HELLO YOU"
+
+PRINT "                    OOOOOOOOO  "   
+PRINT "                   OOOOOO   "
+PRINT "                  OOOO    "
+PRINT "                 OOO    "
+PRINT "            ^   |__|         "
+PRINT "           /_\  |__|        "
+PRINT "          /___\ |__|          "
+PRINT "         /_____\|__|          "
+PRINT "        /_______\__|         "
+PRINT "       /_________\_|         "
+PRINT "      /___________\|         "
+PRINT "     /_____________\      "
+PRINT "    /|             |\   OO   "
+PRINT "     |           |  OOOOOO    "
+PRINT "     |           | OOOOOOOO   "
+PRINT "     |             | OOOOOOOO      "
+PRINT "     |             | OOOOOOOOO     "
+PRINT "     |      /\     |  OOOOOOOOO      "
+PRINT "     |     /  \    |   | |//         "
+PRINT "     |    /____\   |OO |  /          "
+PRINT "     |  |  |   |OO\| |           "
+PRINT "     |  |  |   |  \| |           "
+PRINT "     |    |   o|   |   | |           "
+PRINT "     |    |    |   |   | |           "
+PRINT "~~~~~|____|____|___|~~~|_|~~~~~~~~~~~~"
+PRINT "          |____|           |          |         "
+PRINT "          |____|           |          |"
+PRINT "          |____|___________|          |  "
+PRINT "          |____|           |          |  "
+PRINT "          |____|___________|          |   "
+PRINT "                           |          |   "
+PRINT "___________________________|          |   "
+PRINT ""
+PRINT ""
+PRINT "---------------------------------------     "
+PRINT "                                               "
+PRINT "___ ___ ___ ___ ___ ___ ___ ___ ___ ___ "
+PRINT "                                         "
+PRINT "_______________________________________"
+PRINT ""
+PRINT "_______________________________________ "
+INPUT PROMPT "Enter your first name ": firstName$
+INPUT PROMPT "Enter your last name ": lastName$
+PRINT "Hello";
+PRINT firstName$ & " " & lastName$
+INPUT PROMPT "What is your street name and house number?": streetName$
+INPUT PROMPT "What is you zip-code?": zipCode$
+INPUT PROMPT "What city?": cityName$
+INPUT PROMPT "What state?": stateName$
+PRINT "Thank you" & " " & firstName$ & " " & lastName$
+PRINT lastName$ & "." & firstName$
+PRINT streetName$
+PRINT cityName$ & "," & stateName$ & " " & zipCode$
+END

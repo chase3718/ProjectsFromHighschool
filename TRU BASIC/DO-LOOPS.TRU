@@ -1,0 +1,50 @@
+LET x = 1
+DO while x <= 1345
+   PRINT x;
+   LET x = x +2
+LOOP
+PRINT " "
+PRINT ""
+LET x = 9
+DO while x < 1345
+   PRINT x;
+   LET x = x + 2
+LOOP
+PRINT ""
+PRINT ""
+LET x = 0
+LET sum = 2
+DO while sum <= 3190
+   LET x = x + sum
+   LET sum = sum + 2
+LOOP
+PRINT x
+PRINT ""
+PRINT ""
+LET x = 4
+LET sum = 1
+DO while x <= 387
+   LET x = 4 * sum
+   IF x > 387 then
+      EXIT DO
+   END IF
+   PRINT x;
+   LET sum = sum + 1
+LOOP
+LET sumalso = sum - 1
+PRINT ""
+PRINT sumalso
+PRINT ""
+PRINT ""
+LET x = 7
+LET y = x
+LET sum = 2
+DO while y <= 97000000000
+   LET x = x ^ sum
+   LET y = x
+   PRINT x;
+   LET x = 7
+   LET sum = sum + 1
+LOOP
+PRINT sum
+END

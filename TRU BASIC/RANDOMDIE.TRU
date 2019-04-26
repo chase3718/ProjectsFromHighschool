@@ -1,0 +1,6 @@
+FOR a = 1 to 4
+    LET b = rnd
+    LET b = truncate((b*6) + 1, 0)
+    PRINT "Die #" & str$(a) & " is a " & str$(b),
+NEXT a
+END

@@ -1,0 +1,64 @@
+2)
+public int findProgress (int progNeeded) {
+	int month = 0;
+	double var = ProgPerMonth;
+	int fin = ProgNeeded;
+	double i = 100;
+	while (var <= fin) {
+		month ++;
+		var += (i / 10);
+		i  -= var;
+	}
+	retrun Month;
+}
+
+public static void main (Sting[] args) {
+	int o = 95;
+	findProgress x = new findProgress(o);
+	System.out.print(x);
+}
+8)
+public int sumDigits (int num) {
+	num = Math.abs(num);
+	int nDig = 0;
+	int dig = 1;
+	int sum = 0;
+	while ((int)Math.pow(10,dig) <= num) {
+		nDig ++;
+	}
+	for (int n = 1; n < nDig; n++) {
+		sum += num%10;
+		num -= num%10;
+		num /= 10;
+	}
+	return sum;
+}
+11) 
+public class Stars {
+	public Stars (int num) {
+		int sum = 0;
+		int rowNum = 1;
+		int x = 0;
+		int y = 0;
+		for (int n = 0; n < num; n++) {
+			while (y < (num*2 - n * 2)/2) {
+				System.out.print(" ");
+				y ++;
+			}
+			while (x < n * 2 + 1) {
+				System.out.print("*");
+				x ++;
+			}
+			x = 0;
+			y = 0;
+			System.out.println("");
+		}
+
+	}
+	public static void main(String[] args) {
+		Stars n = new Stars(15);
+	}
+}
+12)
+
+13)

@@ -1,0 +1,46 @@
+PRINT "Welcome to Uncle Pepe's Shipping"
+PAUSE 2
+INPUT prompt "What zone are you in? ": a
+IF a < 1 OR a > 5 then
+   PRINT "THAT IS UNACCEPTABLE."
+ELSE
+   INPUT prompt "In pounds, how much does your package weigh? ": b
+   INPUT prompt "What type of service would you like? ": c$
+   INPUT prompt "Where are you shipping to? ": d
+   IF a < 1 OR a > 5 then
+      PRINT "THAT IS UNACCEPTABLE."
+   ELSE
+      PRINT "Thank you"
+      PAUSE 1
+      PRINT "Calculating";
+      PAUSE 1
+      PRINT ".";
+      PAUSE 1
+      PRINT ".";
+      PAUSE 1
+      PRINT ".";
+      PAUSE 1
+      PRINT ".";
+      PAUSE 1
+      PRINT "."
+      PAUSE 1
+      LET e = abs(a - d)
+      IF c$ = "Standard" then
+         LET g = 1.99
+      ELSE IF c$ = "2-day" then
+         LET g = 2.99
+      ELSE IF c$ = "Overnight" then
+         LET g = 4.99
+      END IF
+      LET z = ( b * g ) + 4.99 * e
+      OPEN #1: SCREEN .5, 1, .5, .9
+      SET COLOR "WHITE"
+      FLOOD .5, .5
+      SET BACKGROUND COLOR "BLACK"
+      SET COLOR "WHITE"
+      PRINT "Thank you for waiting, your bill is $" & STR$(z) & "."
+      PAUSE 2
+      PRINT "Come again soon!!!"
+   END IF
+END IF
+END

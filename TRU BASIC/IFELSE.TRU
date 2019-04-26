@@ -1,0 +1,28 @@
+!INPUT PROMPT "Enter a number": num
+!ADD 5 TO num AND STORE IT IN num
+
+
+!LET num = num + 5
+!the = is the assignment opperator
+!left side < right side
+
+
+!PRINT num
+
+LET x = 9238
+PRINT x
+
+LET x = x + x
+PRINT x
+
+IF x = 46 THEN
+   PRINT "I DON'T CARE"
+ELSE IF x = 746 THEN
+   PRINT "I STILL DON'T CARE WHAT YOUR NUMBER IS"
+ELSE IF x = 200 then
+   PRINT "meh"
+ELSE
+   PRINT "PooP"
+END IF
+
+END

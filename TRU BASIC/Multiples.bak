@@ -1,0 +1,10 @@
+INPUT PROMPT "Input any number ": n
+FOR x = 1 TO 10
+    LET f = n * x
+    IF x < 10 then
+       PRINT STR$(f) & ", ";
+    ELSE
+       PRINT STR$(f)
+    END IF
+NEXT x
+END

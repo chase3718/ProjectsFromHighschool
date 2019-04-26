@@ -1,0 +1,28 @@
+LET n = 1
+FOR x = 1 TO 6
+    PRINT STR$(n)
+    LET n = n + 3
+NEXT x
+LET f = 20
+FOR g = 1 TO 4
+    PRINT STR$(f)
+    LET f = f - 5
+NEXT g
+LET j$ = "*"
+FOR p = 1 TO 500
+    PRINT j$;
+NEXT p
+INPUT PROMPT "Please enter a number. ": r
+FOR e = 1 TO r
+    PRINT "*";
+NEXT e
+INPUT prompt "Enter a number. ": o
+LET n = 1
+FOR i = 1 TO o
+    PRINT STR$(n)
+    LET n = n + 2
+    IF n > o THEN
+       EXIT FOR
+    END IF
+NEXT i
+END

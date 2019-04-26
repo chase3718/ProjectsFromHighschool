@@ -1,0 +1,9 @@
+INPUT PROMPT "How many? ": p
+FOR x = 1 to p
+LET x = p
+FOR p = 1 TO p
+LET n$ = "*"
+PRINT REPEAT$(n$,x)
+NEXT p
+NEXT x
+END

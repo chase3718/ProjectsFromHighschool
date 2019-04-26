@@ -1,0 +1,54 @@
+INPUT prompt "1 for maroon, 2 for yellow, and 3 for blue": varTicket
+IF varTicket = 1 then
+   INPUT prompt "How many": varMaroon
+   IF varMaroon < 5 then
+      LET maroonPrice = varMaroon * 14
+      PRINT varMaroon;
+      PRINT "maroon ticket(s)";
+      PRINT "for"
+      PRINT "$";
+      PRINT maroonPrice
+   ELSE
+      LET maroonPrice = varMaroon * 13
+      PRINT varMaroon;
+      PRINT "maroon ticket(s)";
+      PRINT "for"
+      PRINT "$";
+      PRINT maroonPrice
+   END IF
+ELSE IF varTicket = 2 then
+   INPUT prompt "How many": varYellow
+   IF varYellow < 5 then
+      LET yellowPrice = varYellow * 10
+      PRINT varYellow;
+      PRINT "yellow ticket(s)";
+      PRINT "for"
+      PRINT "$";
+      PRINT yellowPrice
+   ELSE
+      LET yellowPrice = varYellow * 9.5
+      PRINT varYellow;
+      PRINT "yellow ticket(s)";
+      PRINT "for"
+      PRINT "$";
+      PRINT yellowPrice
+   END IF
+ELSE IF varTicket = 3 then
+   INPUT prompt "How many": varBlue
+   IF varBlue < 5 then
+      LET bluePrice = varBlue * 7
+      PRINT varBlue;
+      PRINT "Blue ticket(s)";
+      PRINT "for"
+      PRINT "$";
+      PRINT bluePrice
+   ELSE
+      LET bluePrice = varBlue * 6.5
+      PRINT varBlue;
+      PRINT "Blue ticket(s)";
+      PRINT "for"
+      PRINT "$";
+      PRINT bluePrice
+   END IF
+END IF
+END

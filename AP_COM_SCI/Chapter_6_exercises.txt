@@ -1,0 +1,45 @@
+1. a) Neither
+   b) local
+   c) Fields
+   d) local
+   e) fields
+   f) fields
+2. a) false, multiple variables may be declared on the same line
+   b) false, for which part of the program it is defined
+   c) True
+   d) true
+   e) false
+3. symbolic constants can easily be referenced, reused, and changed
+4. B
+5. Compiled
+6. a) 0
+   b) 0
+   c) 5.0
+   d) 0
+   e) 3
+7. a) 105
+   b) 19
+8. count += ((total/pages)-5)*words - 1;
+9. change (1/2*(g*t*t)) to (1.0/2.0*(g*t*t))
+10. x = math.Ceil(x+0.5);
+12. Loss of percision
+13. int a = n % 100;
+    int b = n % 10 - a * 100;
+    int c = n - b*10 - a*100;
+    int d = a * 100 + c*10 + a;
+15. int timeHour = (depHour)-(curHour);
+    int timeMin = (depMin)-(curMint);
+    if(timeMin < 0){
+        timeMin += 60;
+        timeHour --;
+    }
+    System.out.print(timeHour + " hours and " + timeMin + " mintutes.");
+17. 
+public double computeShippingCost(int nJars)
+{
+	int nCartons = (nJars + 11) / 12;
+	int totalOunces = (nJars * 21) + (nCartons * 25);
+	int lbs = math.Ceil(totalOunces / 16);
+	totalOunces -= lbs * 16;
+	return 3.0 + 1.44 * nCartons + lbs * 0.96;
+}

@@ -1,0 +1,48 @@
+@Java
+method h(){
+    while(!isFlower(HERE)){
+        if(!isNet(AHEAD)){
+            if(isClear(LEFT) && isClear(RIGHT)){
+                turn(RIGHT);
+                hop();
+            }else if(isWater(AHEAD)){
+                turn(LEFT);
+            }else if(isClear(LEFT) && !isClear(RIGHT)){
+                hop();
+            
+            }else if(isWater(LEFT) && isClear(RIGHT)){
+                turn(RIGHT);
+                hop();
+            }else if(isWater(LEFT)){
+                hop();
+            }else{
+                hop();
+            }
+        }else if(isNet(AHEAD) || isWater(AHEAD)){
+            if(isClear(LEFT) && isClear(RIGHT) && isNet(AHEAD)){
+                turn(RIGHT);
+            }else{
+                turn(LEFT);
+                
+            }
+        }else if(isFlower(AHEAD)){
+            hop();
+          
+        }
+}
+}
+method end(){
+pick();
+    if(isWater(AHEAD) && isFacing(SOUTH)){
+        turn(LEFT);
+    }
+    while(isClear(AHEAD)){
+        hop();
+    }
+}
+@@
+method main(){
+    Jeroo j = new Jeroo (23,0,EAST);
+    j.h();
+    j.end();
+}

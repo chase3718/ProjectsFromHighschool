@@ -1,0 +1,9 @@
+INPUT PROMPT "How many perfect squares do you want to see? ": varNum
+LET x = 4
+FOR x = 1 to varNum
+LET z = x
+LET x = x * x
+PRINT x
+LET x = z
+NEXT x
+END

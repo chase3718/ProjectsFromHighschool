@@ -1,0 +1,28 @@
+@Java
+method maze(){
+    while(!isFlower(HERE)){
+        if(isWater(AHEAD)){
+            if(isClear(LEFT)){
+                turn(LEFT);
+                hop();
+            }else if(isClear(RIGHT)){
+                turn(RIGHT);
+                hop();
+            }else if(!isClear(LEFT) && !isClear(RIGHT)){
+                turn(LEFT);
+                turn(LEFT);
+            }
+       
+        }else if(!isWater(AHEAD)){
+            hop();
+        }
+           
+            
+        
+}
+}
+@@
+method main(){
+    Jeroo j = new Jeroo(18,0,EAST);
+    j.maze();
+}

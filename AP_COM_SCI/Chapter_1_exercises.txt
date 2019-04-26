@@ -1,0 +1,10 @@
+1) a. False b. False c. False
+2)
+A--|>o-\
+       |)--
+B--|>o-/
+5) D
+10) a. False b. True c. True d. True
+11) a. 8 b. 256 c. 65536
+12) a. 2, 2 b. 7, 7 c. 256, 100 d. 11, 11 e. 387, c3 f. 245, 1e5 g.1426, 592
+14) 2097152 bits

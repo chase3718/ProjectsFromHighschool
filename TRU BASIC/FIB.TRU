@@ -1,0 +1,12 @@
+INPUT PROMPT "Choose a the maximum number. ": varNum
+LET x = 1
+LET y = 1
+FOR x = 0 to varNum
+    LET z = x
+    LET x = x + y
+    LET y = z
+    PRINT x
+    LET x = x - 1
+PAUSE 1
+NEXT x
+END

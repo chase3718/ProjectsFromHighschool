@@ -1,0 +1,11 @@
+INPUT PROMPT "Insert 5 numbers with commas after each one. ": a,b,c,d,e
+DIM num(6)
+LET num(1) = a
+LET num(2) = b
+LET num(3) = c
+LET num(4) = d
+LET num(5) = e
+LET num(6) = num(1) + num(2) + num(3) + num(4) + num(5)
+PRINT STR$(a) & " " & STR$(b) & " " &  STR$(c) & " " &  STR$(d) & " " &  STR$(e)
+PRINT num(6)
+END

@@ -1,0 +1,129 @@
+Use the following code for problems 1 – 15. In each problem state what’s printed.
+	    01234567890123456
+String s = “Lucky hockey puck”; //17
+String m = “uck”; //3
+int j = 6, z = 99;
+
+
+1. int k = s.indexOf(m);
+System.out.println(k);
+1
+
+2. int k = s.indexOf(“uck”, j);
+System.out.println(k);
+14
+
+3. int k = s.indexOf(‘c’);
+System.out.println(k);
+2
+
+4. String str = s.replace(‘o’, ‘p’);
+System.out.println(str);
+“Lucky hpckey puck”
+
+5. int k = s.lastIndexOf(m, j + 3);
+System.out.println(k);
+1
+
+6. char p = s.charAt(7);
+System.out.println(p);
+o
+
+7. int k = s.indexOf(z);
+System.out.println(k);
+
+
+8. int k = s.lastIndexOf(m);
+System.out.println(k);
+
+
+9. int k = s.indexOf(‘y’, j);
+System.out.println(k);
+
+
+10. char p = s.charAt(z - 90);
+System.out.println(p);
+
+
+11. int k = s.indexOf(m,15);
+System.out.println(k);
+
+
+12. int k = s.indexOf(z + 2, 4);
+System.out.println(k);
+
+
+13. int k = s.lastIndexOf(‘h’);
+System.out.println(k);
+
+
+14. int k = s.lastIndexOf(121);
+System.out.println(k);
+
+
+15. String str = s.replace(‘y’, ‘A’);
+System.out.println(str);
+The following code applies to problems 16 – 22. In each problem, state what’s printed.
+String xyz = “bathtub”;
+String ddd = “BathTUB”;
+String ccc = xyz;
+String wc = “Whooping crane”;
+String s = “ \t\tGu daay, mates \n”;
+
+
+16. int j = xyz.compareTo(wc);
+boolean bb;
+if (j > 0)
+{
+bb = true;
+}
+else
+{
+bb = false;
+}
+System.out.println(bb);
+
+
+17. String v = ddd.toLowerCase( );
+int fg = ccc.compareTo(v);
+System.out.println(fg + 1);
+
+
+18. System.out.println(ddd.compareTo(ccc));
+
+
+19. System.out.println(xyz.compareTo(ccc));
+
+
+20. System.out.println(“Stupid”.compareTo(ddd));
+
+
+21. System.out.println(“>>>” + s.trim( ) + “<<<”);
+For the remaining problems assume the following code has already executed:
+String m = “Good morning, how may I help you? I289 56”;
+Scanner sc = new Scanner(m);
+In each of the following problems, assume that the code in all of the preceding problems
+(starting with problem 22) has run and state what is printed. If an exception (error) is
+generated, state what causes it.
+
+
+22. System.out.println(sc.next( ));
+
+
+23. sc.skip(“\\s*mo”);
+String s = sc.next( );
+System.out.println(s);
+
+
+24. sc.useDelimiter(“\\s+I”);
+System.out.println(sc.next( ));
+
+
+25. sc.findInLine(“el”);
+System.out.println(sc.hasNext( ));
+System.out.println(sc.next( ));
+
+
+26. sc.useDelimiter(“\\s+”);
+System.out.println(sc.nextInt( ));
+

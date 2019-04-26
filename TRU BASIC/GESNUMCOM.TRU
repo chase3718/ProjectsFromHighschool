@@ -1,0 +1,32 @@
+PRINT "Think of a number 1 to 100"
+LET comges = 50
+LET nummin = 0
+LET nummax = 100
+FOR gesnum = 0 to 1
+    LET x = TRUNCATE(comges/2,0)
+    INPUT PROMPT "IS YOUR NUMBER " & STR$(comges): com$
+    IF com$ = "higher" then
+
+       LET comges = (comges) + TRUNCATE(x/2,0)
+       IF comges > nummax then
+
+          LET comges = nummax + 1
+          LET nummax = comges
+       END IF
+
+    ELSE IF com$ = "lower" then
+       LET  comges  = comges - TRUNCATE(x/2,0)
+
+       IF comges < nummin then
+
+          LET comges = nummin - 1
+          LET nummin = comges
+       END IF
+
+    ELSE IF com$ = "yes" then
+       EXIT FOR
+    END IF
+    LET gesnum = 0
+NEXT gesnum
+PRINT "I WON"
+END

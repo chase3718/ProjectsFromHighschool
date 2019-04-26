@@ -1,0 +1,64 @@
+1. 65
+
+2. 90
+
+3. 97
+
+4. 122
+
+5. 26
+
+6. 48
+
+7. 57
+
+8. A - Z
+
+9. alfred e. neuman
+
+10. char ch = 'X';
+    String str = "" + ch;
+
+11. String p = "H";
+    char ch = p.charAt(0);
+
+
+12. yes
+
+13. yes
+
+14. no
+
+15. B3
+
+16. E
+
+17. String str = "" + boy;
+    str = str.toUpperCase();
+    char cv = (char)(str);
+
+18. String str = "" + boy;
+    str = str.toLowerCase();
+    char cv = (char)(str);
+
+19. if(bv >= 48 && bv <= 57){
+        return true;
+    }
+
+20. if(bv >= 65 && bv <= 122){
+	return true;
+    }
+
+21. if(bv >= 65 && bv <= 90){
+	return true;
+}
+
+22. if(bv >= 48 && bv <= 122){
+	return true;
+}
+
+23. if(bv >= 97 && bv <= 122){
+	return true;
+}
+
+24. " "

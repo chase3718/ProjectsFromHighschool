@@ -1,0 +1,14 @@
+DIM h(15)
+FOR j = 1 to 15
+    INPUT x
+    LET h(j) = x
+NEXT j
+MAT PRINT h
+INPUT PROMPT "Starting index ": q
+PRINT h(q),
+INPUT PROMPT "Ending index ": w
+PRINT h(w)
+FOR e = q TO w
+    PRINT h(e),
+NEXT e
+END

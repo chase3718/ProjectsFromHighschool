@@ -1,0 +1,141 @@
+1. if(x > y){
+	return x;
+   }else if(y > x){
+	return y;
+   }else if(x == y){
+	int r = (int)((random()*2) + 1);
+	if(r == 1){
+		return x;
+   	}else if(r == 2){
+		return y;
+	}
+   }
+2.
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.text.DecimalFormat;
+
+public class Wages extends JFrame
+    implements ActionListener
+{
+  private JTextField inputHours, inputRate, display;
+  private DecimalFormat money = new DecimalFormat("$0.00");
+
+  public Wages()
+  {
+    super("Wages Calculator");
+
+    JPanel panel = new JPanel();
+    panel.setLayout(new GridLayout(3,2));
+
+    panel.add(new JLabel("   Hours worked:"));
+    inputHours = new JTextField(5);
+    inputHours.setHorizontalAlignment(JTextField.RIGHT);
+    panel.add(inputHours);
+
+    panel.add(new JLabel("   Hourly rate:"));
+    inputRate = new JTextField(5);
+    inputRate.setHorizontalAlignment(JTextField.RIGHT);
+    panel.add(inputRate);
+
+    panel.add(new JLabel("   Total wages:"));
+    display = new JTextField(20);
+    display.setHorizontalAlignment(JTextField.RIGHT);
+    display.setEditable(false);
+    display.setBackground(Color.yellow);
+    panel.add(display);
+
+    JButton calc = new JButton("Calculate wages");
+    calc.addActionListener(this);
+
+    Container c = getContentPane();
+    c.add(panel, BorderLayout.CENTER);
+    c.add(calc, BorderLayout.SOUTH);
+  }
+
+  public double totalWages(double hours, double rate)
+  {
+    double wages = 0;
+    for(int n = 0; n < Math.floor(hours); n++){
+    	if(n < 40){
+    		wages += rate;
+    	}else if(n >= 40){
+    		wages += rate * 1.5;
+    	}
+    }
+    hours -= Math.floor(hours);
+	wages += rate * hours;
+    return wages;
+  }
+
+  public void actionPerformed(ActionEvent e)
+  {
+    String s = inputHours.getText();
+    double hours = Double.parseDouble(s);
+    s = inputRate.getText();
+    double rate = Double.parseDouble(s);
+    double wages = totalWages(hours, rate);
+    display.setText(money.format(wages));
+  }
+
+  public static void main(String[] args)
+  {
+    Wages window = new Wages();
+    window.setBounds(300, 300, 200, 150);
+    window.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    window.setVisible(true);
+  }
+}
+
+4. B.
+5. 
+   a). !((!x || !y) && (a || b))
+       !(!x || !y) && !(a || b)
+       x && y || !a && !b
+   b). if (!(x == 7) && !(x > 7))
+       if (x < 7)
+6. 
+   a). if ((x + 2 > a || x - 2 < b) && y >= 0)
+   b). if (a >= b && a >= c && a % 2 == 0)
+7. if (x >= 0 && Math.sqrt(Math.abs(x) < 3 && x > 7)
+9. if (x % 100 == 0 && x % 1000 != 0)
+10. 
+   a). boolean inside = !x < left || !x > right || !y < top || !y > bottom;
+   b). boolean no = ch[0] == 'N' || ch[0] == 'n' && ch[1] == 'O' || ch[1] == 'o';
+11. 
+   public boolean isLeapYear(int year) {
+      if (year % 4 == 0) {
+         if (year % 100 == 0) {
+	    if (year % 400 == 0) {
+	       return true;
+	    } else {
+	       return false;
+	    }
+	 }
+      } else {
+         return false;
+      }
+   }
+12. '
+   public static boolean isLater (int month1, int day1, int year1, int month2, int day2, int year2) {
+      if (year1 > year2) {
+         return true;
+      } else if (year1 < year2) {
+         return false;
+      } else {
+         if (month1 > month2) {
+            return true;
+         } else if (month1 < month2) {
+            return false;
+         } else {
+           if (day1 > day2) {
+              return true;
+           } else if (day1 < day2 || day1 == day2) {
+              return false;
+           }
+         }
+      }
+   }
+13. 
+   

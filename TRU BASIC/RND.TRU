@@ -1,0 +1,21 @@
+SET BACKGROUND COLOR "BLACK"
+FOR num = -1 TO 2
+    LET num = RND
+    IF num <= .2 then
+       SET COLOR "BLUE"
+       PRINT STR$(num) & STR$(num);
+    ELSE IF num < .2 AND num <= 4 then
+       SET COLOR "RED"
+       PRINT STR$(num) & STR$(num);
+    ELSE IF num < .4 AND num <= .6 THEN
+       SET COLOR "GREEN"
+       PRINT STR$(num) & STR$(num);
+    ELSE IF num < .6 AND num <= .8 then
+       SET COLOR "YELLOW"
+       PRINT STR$(num) & STR$(num);
+    ELSE IF num < .8 AND num <= 1 then
+       SET COLOR "WHITE"
+       PRINT STR$(num) & STR$(num);
+    END IF
+NEXT num
+END

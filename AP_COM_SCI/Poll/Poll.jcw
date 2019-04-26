@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>Poll</label>
+		<id>42</id>
+		<version>0</version>
+	</settings>
+	<users>
+		<user>
+			<path>Poll.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>Poll.jcp</path>
+		</project>
+	</projects>
+</workspace>

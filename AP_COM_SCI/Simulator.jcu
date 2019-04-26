@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace_user>
+	<active_project>
+		<label>SIMULATOR</label>
+	</active_project>
+	<projects>
+		<project>
+			<label>SIMULATOR</label>
+			<showfiles>false</showfiles>
+			<folderitem>
+				<path>New folder\Simulator</path>
+				<dir>Simulator</dir>
+			</folderitem>
+			<folderitem>
+				<path>New folder\Simulator\src</path>
+				<dir>Simulator\src</dir>
+			</folderitem>
+		</project>
+		<project>
+			<label>Simulator</label>
+			<showfiles>false</showfiles>
+			<folderitem>
+				<path>Craps</path>
+			</folderitem>
+			<folderitem>
+				<path>Craps\source</path>
+			</folderitem>
+			<folderitem>
+				<path>DanceStudio</path>
+			</folderitem>
+			<folderitem>
+				<path>DanceStudio\FirstSteps</path>
+			</folderitem>
+			<folderitem>
+				<path>FirstSteps</path>
+			</folderitem>
+			<folderitem>
+				<path>HelloGui</path>
+			</folderitem>
+			<folderitem>
+				<path>New folder</path>
+			</folderitem>
+			<folderitem>
+				<path>New folder\Simulator</path>
+			</folderitem>
+			<folderitem>
+				<path>New folder\Simulator\src</path>
+			</folderitem>
+			<folderitem>
+				<path>Poll</path>
+			</folderitem>
+		</project>
+	</projects>
+	<open_files>
+		<docitem>
+			<path>New folder\Simulator\src\Simulator.java</path>
+			<source>true</source>
+			<index>0</index>
+			<active>true</active>
+		</docitem>
+		<docitem>
+			<path>Bmi.java</path>
+			<source>true</source>
+			<index>1</index>
+			<active>false</active>
+		</docitem>
+	</open_files>
+</workspace_user>

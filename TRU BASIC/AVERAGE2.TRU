@@ -1,0 +1,10 @@
+!accumultor
+LET sum = 0
+INPUT prompt "How many numbers? ": b
+FOR x = 1 TO b
+    INPUT prompt "Enter a number and hit <Enter>. ": a
+    LET sum = sum + a
+NEXT x
+LET n = sum / b
+PRINT STR$(n)
+END

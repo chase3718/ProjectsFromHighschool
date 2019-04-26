@@ -1,0 +1,61 @@
+INPUT a,b,c,d,e,f,g,h,i,j
+DIM nums(10)
+LET nums(1) = a
+LET nums(2) = b
+LET nums(3) = c
+LET nums(4) = d
+LET nums(5) = e
+LET nums(6) = f
+LET nums(7) = g
+LET nums(8) = h
+LET nums(9) = i
+LET nums(10) = j
+PRINT STR$(a) & " " & STR$(b) & " " & STR$(c) & " " & STR$(d) & " " & STR$(e) & " " & STR$(f) & " " & STR$(g) & " " & STR$(h) & " " & STR$(i) & " " & STR$(j)
+LET a = (a + b + c + d + e + f + g + h + i + j) / 10
+LET high = nums(1)
+FOR x = 1 to 9
+    IF high < nums(x+1) then
+       LET high = nums(x+1)
+    END IF
+NEXT x
+LET low = nums(1)
+FOR y = 1 to 9
+    IF low > nums(y+1) then
+       LET low = nums(y+1)
+    END IF
+NEXT y
+DIM var(3)
+LET var(1) = high
+LET var(2) = low
+LET var(3) = a
+PRINT "HIGH " & STR$(high),
+PRINT "LOW " & STR$(low),
+PRINT "AVERAGE " & STR$(a)
+LET sum = 0
+FOR s = 1 to 10
+    IF nums(s) < high then
+       PRINT nums(s),
+       LET sum = sum + 1
+    END IF
+NEXT s
+PRINT "were all lower than " & STR$(high);
+PRINT ". There were " & STR$(sum) & " numbers less than " & STR$(high)
+LET sum = 0
+FOR m = 1 to 10
+    IF nums(m) > low then
+       PRINT nums(m),
+       LET sum = sum + 1
+    END IF
+NEXT m
+PRINT "were all higher than " & STR$(low);
+PRINT ". There were " & STR$(sum) & " numbers higher than " & STR$(low)
+LET sum = 0
+FOR n = 1 to 10
+IF nums(n) < a then
+PRINT nums(n),
+let sum = sum + 1
+end if
+next n
+print "were all lower than " & STR$(a);
+PRINT ". There were " & STR$(sum) & " numbers less than " & STR$(a)
+END
