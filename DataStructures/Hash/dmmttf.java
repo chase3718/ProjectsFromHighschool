@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 public class dmmttf {
 	@SuppressWarnings("unchecked")
-	public dmmttf(String poop) throws IOException {
-		Scanner sc = new Scanner(new File(poop));
+	public dmmttf(String p) throws IOException {
+		Scanner sc = new Scanner(new File(p));
 
 	}
 	public static void main(String args[]) throws IOException{
